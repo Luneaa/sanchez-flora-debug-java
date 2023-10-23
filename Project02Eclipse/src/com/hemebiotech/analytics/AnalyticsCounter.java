@@ -8,29 +8,27 @@ public class AnalyticsCounter {
 	private static int headacheCount = 0;
 	private static int rashCount = 0;
 	private static int pupilCount = 0;
-	
+
 	public static void main(String args[]) throws Exception {
 		// first get input
 		BufferedReader reader = new BufferedReader (new FileReader("symptoms.txt"));
 		String line = reader.readLine();
 
-		int i = 0;
-		int headCount = 0;
+
 		while (line != null) {
-			i++;
 			if (line.equals("headache")) {
-				headCount++;
+				headacheCount++;
 			}
-			else if (line.equals("rush")) {
+			else if (line.equals("rash")) {
 				rashCount++;
 			}
-			else if (line.contains("pupils")) {
+			else if (line.equals("dialated pupils")) {
 				pupilCount++;
 			}
 
 			line = reader.readLine();	// get another symptom
 		}
-		
+
 		// next generate output
 		FileWriter writer = new FileWriter ("result.out");
 		writer.write("headache: " + headacheCount + "\n");
