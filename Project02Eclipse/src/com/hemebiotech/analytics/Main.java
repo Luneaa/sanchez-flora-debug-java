@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Main {
-    public static void main(String args[]) throws Exception {
+    public static void main(String[] args) {
         // Init
         ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
         ISymptomWriter writer = new WriteSymptomDataToFile("result.out");
