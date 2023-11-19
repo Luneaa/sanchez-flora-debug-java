@@ -10,7 +10,14 @@ import java.util.TreeMap;
  */
 public class AnalyticsCounter {
 
+	/**
+	 * Symptoms reader instance used to read symptoms from a source
+	 */
 	private final ISymptomReader reader;
+
+	/**
+	 * Symptoms writer instance used to write symptoms to a target
+	 */
 	private final ISymptomWriter writer;
 
 	public AnalyticsCounter(ISymptomReader reader, ISymptomWriter writer) {
